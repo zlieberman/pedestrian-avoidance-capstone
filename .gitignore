@@ -1,0 +1,3 @@
+# ignore build and devel folders as they are created when 'catkin_make' is run
+devel/
+build/
