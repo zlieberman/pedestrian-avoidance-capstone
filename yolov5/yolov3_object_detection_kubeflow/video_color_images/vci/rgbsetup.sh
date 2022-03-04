@@ -1,0 +1,11 @@
+mkdir video_color_images
+cd video_color_images
+mkdir images
+cd images
+mkdir train
+mkdir val
+cd ..
+mkdir labels
+cd labels
+mkdir train
+mkdir val
