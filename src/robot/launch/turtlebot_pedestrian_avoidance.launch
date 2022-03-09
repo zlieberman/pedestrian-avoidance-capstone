@@ -1,0 +1,11 @@
+<launch>
+
+    <node
+        pkg = "turtlebot_pedestrian_avoidance"
+        type = "turtlebot_pedestrian_avoidance"
+        name = "turtlebot_pedestrian_avoidance"
+        output = "screen"
+        launch-prefix = "xterm -e"
+    />
+
+</launch>
