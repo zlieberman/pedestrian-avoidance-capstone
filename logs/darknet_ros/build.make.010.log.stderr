@@ -1,0 +1,10 @@
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:[m[K In member function ‘[01m[Kvoid darknet_ros::YoloObjectDetector::Coordinates(int, int, int, int, int)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:738:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kint[m[K’
+       int Yc = ((ymax-ymin)/2)+ymin
+[01;32m[K       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:797:43:[m[K [01;31m[Kerror: [m[K‘[01m[KYc[m[K’ was not declared in this scope
+    Value=(float)DepthImageCopy_.at<float>(Yc,Xc)
+[01;32m[K                                           ^[m[K
+make[2]: *** [CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/darknet_ros_lib.dir/all] Error 2
+make: *** [all] Error 2

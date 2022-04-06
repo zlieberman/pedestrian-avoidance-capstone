@@ -1,0 +1,20 @@
+[  0%] Built target darknet_ros_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target darknet_ros_lib[0m
+[  1%] [32mBuilding CXX object CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o[0m
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:[m[K In lambda function:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:522:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+       demoNames_ = [];
+[01;32m[K                      ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:[m[K In member function ‘[01m[Kvoid darknet_ros::YoloObjectDetector::setupNetwork(char*, char*, char*, float, char**, int, int, char*, int, float, int, int, int, int)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:522:18:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdarknet_ros::YoloObjectDetector::setupNetwork(char*, char*, char*, float, char**, int, int, char*, int, float, int, int, int, int)::<lambda()>[m[K’ to ‘[01m[Kchar**[m[K’ in assignment
+       demoNames_ = [];
+[01;32m[K                  ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:523:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kalphabet[m[K’ was not declared in this scope
+       demoAlphabet_ = alphabet;
+[01;32m[K                       ^[m[K
+CMakeFiles/darknet_ros_lib.dir/build.make:1696: recipe for target 'CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o' failed
+make[2]: *** [CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o] Error 1
+CMakeFiles/Makefile2:1866: recipe for target 'CMakeFiles/darknet_ros_lib.dir/all' failed
+make[1]: *** [CMakeFiles/darknet_ros_lib.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

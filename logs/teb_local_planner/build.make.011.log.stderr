@@ -1,0 +1,7 @@
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In member function ‘[01m[Kvoid teb_local_planner::TebLocalPlannerROS::pedestrianDetectedCB(const ConstPtr&)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:1002:32:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst _bounding_boxes_type {aka const std::vector<darknet_ros_msgs::BoundingBox_<std::allocator<void> >, std::allocator<darknet_ros_msgs::BoundingBox_<std::allocator<void> > > >}[m[K’ to ‘[01m[Kdarknet_ros_msgs::BoundingBox* {aka darknet_ros_msgs::BoundingBox_<std::allocator<void> >*}[m[K’ in assignment
+   pedestrian_detected_objects_ = pedestrians_msg->bounding_boxes;
+[01;32m[K                                ^[m[K
+make[2]: *** [CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o] Error 1
+make[1]: *** [CMakeFiles/teb_local_planner.dir/all] Error 2
+make: *** [all] Error 2

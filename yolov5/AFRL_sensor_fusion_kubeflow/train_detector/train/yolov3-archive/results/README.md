@@ -1,2 +1,0 @@
-# Result
-This directory is use for store interesting text results and graph from training, hyper-parameter tuning, and testing. All results are mannualy copied over from their original generated location. This folder is for record keeping only. Do not store weights or sample outputs here. 

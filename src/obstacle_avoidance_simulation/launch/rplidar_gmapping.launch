@@ -1,0 +1,12 @@
+<launch>
+  <!-- Gmapping -->
+  <arg name="custom_gmapping_launch_file" default="$(find turtlebot_navigation)/launch/includes/gmapping/gmapping.launch.xml"/>
+  <include file="$(arg custom_gmapping_launch_file)"/>
+
+  <!-- Move base -->
+  <include file="$(find turtlebot_obstacle_avoidance)/launch/includes/custom_move_base.launch.xml"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_laser_link_to_laser" args="0.015 0.00 0.05 0 0 0 /base_laser_link /laser 100"/>
+
+</launch>
+

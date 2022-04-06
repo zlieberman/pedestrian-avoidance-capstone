@@ -1,0 +1,6 @@
+distance_core
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/cmake.lock /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/./cmake.lock
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/share/distance_core/cmake/distance_coreConfig-version.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/distance_core/cmake/distance_coreConfig-version.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/share/distance_core/cmake/distance_coreConfig.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/distance_core/cmake/distance_coreConfig.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/lib/pkgconfig/distance_core.pc /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/pkgconfig/distance_core.pc
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/lib/distance_core/distance_node /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/distance_core/distance_node

@@ -1,0 +1,6 @@
+obstacle_avoidance_simulation
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/cmake.lock /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/./cmake.lock
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/share/turtlebot_obstacle_avoidance/cmake/turtlebot_obstacle_avoidanceConfig-version.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/turtlebot_obstacle_avoidance/cmake/turtlebot_obstacle_avoidanceConfig-version.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/share/turtlebot_obstacle_avoidance/cmake/turtlebot_obstacle_avoidanceConfig.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/turtlebot_obstacle_avoidance/cmake/turtlebot_obstacle_avoidanceConfig.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/lib/turtlebot_obstacle_avoidance/obstacle_avoidance /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/turtlebot_obstacle_avoidance/obstacle_avoidance
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/lib/pkgconfig/turtlebot_obstacle_avoidance.pc /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/pkgconfig/turtlebot_obstacle_avoidance.pc

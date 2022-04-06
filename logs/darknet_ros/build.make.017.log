@@ -1,0 +1,7 @@
+[  0%] Built target darknet_ros_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target darknet_ros_lib[0m
+[  1%] [32mBuilding CXX object CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o[0m
+[  2%] [32m[1mLinking CXX shared library /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/darknet_ros/lib/libdarknet_ros_lib.so[0m
+[ 97%] Built target darknet_ros_lib
+[ 98%] [32m[1mLinking CXX executable /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/darknet_ros/lib/darknet_ros/darknet_ros[0m
+[100%] Built target darknet_ros

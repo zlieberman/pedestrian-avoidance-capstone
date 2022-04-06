@@ -18,6 +18,6 @@
   </include>
 
   <!-- Move base -->
- <include file="$(find turtlebot_obstacle_avoidance)/launch/custom_move_base.launch.xml"/>
+ <include file="$(find turtlebot_obstacle_avoidance)/launch/includes/custom_move_base.launch.xml"/>
 </launch>
 

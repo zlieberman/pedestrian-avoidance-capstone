@@ -1,0 +1,36 @@
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/message_filters/subscriber.h:38[m[K,
+                 from [01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/include/darknet_ros/YoloObjectDetector.hpp:22[m[K,
+                 from [01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:10[m[K:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:[m[K In constructor ‘[01m[Kdarknet_ros::YoloObjectDetector::YoloObjectDetector(ros::NodeHandle)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:373:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kdo[m[K’
+   do \
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:32:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO("[YoloObjectDetector] Node started.");
+[01;32m[K   ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:[m[K At global scope:
+[01m[K/opt/ros/kinetic/include/ros/console.h:373:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+   do \
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:32:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+   ROS_INFO("[YoloObjectDetector] Node started.");
+[01;32m[K   ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp:620:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+ } /* namespace darknet_ros*/
+[01;32m[K ^[m[K
+make[2]: *** [CMakeFiles/darknet_ros_lib.dir/src/YoloObjectDetector.cpp.o] Error 1
+make[1]: *** [CMakeFiles/darknet_ros_lib.dir/all] Error 2
+make: *** [all] Error 2

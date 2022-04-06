@@ -1,0 +1,46 @@
+In file included from [01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:39:0[m[K:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:411:19:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   ros::Subscriber pedestrian_detection_sub_ //!< Subscriber to the pedestrian detection model
+[01;32m[K                   ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:412:32:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K[[m[K’ token
+   darknet_ros_msgs::BoundingBox[] pedestrian_detected_objects_ //!< List of BoundingBox objects for each pedestrain found
+[01;32m[K                                ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In constructor ‘[01m[Kteb_local_planner::TebLocalPlannerROS::TebLocalPlannerROS()[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:67:83:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kteb_local_planner::TebLocalPlannerROS[m[K’ does not have any field named ‘[01m[Kinitialized_[m[K’
+                                            last_preferred_rotdir_(RotType::none), initialized_(false)
+[01;32m[K                                                                                   ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In member function ‘[01m[Kvirtual void teb_local_planner::TebLocalPlannerROS::initialize(std::__cxx11::string, tf::TransformListener*, costmap_2d::Costmap2DROS*)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:84:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitialized_[m[K’ was not declared in this scope
+   if(!initialized_)
+[01;32m[K       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:172:65:[m[K [01;31m[Kerror: [m[K‘[01m[KpedestrainDetectionCB[m[K’ is not a member of ‘[01m[Kteb_local_planner::TebLocalPlannerROS[m[K’
+     pedestrian_detection_sub_ = nh.subscribe("darknet_ros", 1, &TebLocalPlannerROS::pedestrainDetectionCB, this);
+[01;32m[K                                                                 ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In member function ‘[01m[Kvirtual bool teb_local_planner::TebLocalPlannerROS::setPlan(const std::vector<geometry_msgs::PoseStamped_<std::allocator<void> > >&)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:196:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitialized_[m[K’ was not declared in this scope
+   if(!initialized_)
+[01;32m[K       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In member function ‘[01m[Kvirtual bool teb_local_planner::TebLocalPlannerROS::computeVelocityCommands(geometry_msgs::Twist&)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:219:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitialized_[m[K’ was not declared in this scope
+   if(!initialized_)
+[01;32m[K       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:327:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpedestrian_detected_objects[m[K’ was not declared in this scope
+   if (pedestrian_detected_objects) {
+[01;32m[K       ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:333:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Klast_cmd[m[K’
+     last_cmd = cmd_vel;
+[01;32m[K     ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In lambda function:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:334:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+     pedestrian_detected_objects = [];
+[01;32m[K                                     ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:[m[K In member function ‘[01m[Kvoid teb_local_planner::TebLocalPlannerROS::pedestrianDetectedCB(const ConstPtr&)[m[K’:
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:1002:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kpedestrian_detected_objects_[m[K’ was not declared in this scope
+   pedestrian_detected_objects_ = pedestrians_msg.bounding_boxes;
+[01;32m[K   ^[m[K
+[01m[K/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/src/teb_local_planner_ros.cpp:1002:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const darknet_ros_msgs::BoundingBoxes_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Kbounding_boxes[m[K’
+   pedestrian_detected_objects_ = pedestrians_msg.bounding_boxes;
+[01;32m[K                                                  ^[m[K
+make[2]: *** [CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o] Error 1
+make[1]: *** [CMakeFiles/teb_local_planner.dir/all] Error 2
+make: *** [all] Error 2

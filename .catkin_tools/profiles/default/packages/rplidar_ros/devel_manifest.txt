@@ -1,0 +1,7 @@
+rplidar_ros
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/cmake.lock /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/./cmake.lock
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/lib/pkgconfig/rplidar_ros.pc /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/pkgconfig/rplidar_ros.pc
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/lib/rplidar_ros/rplidarNode /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/rplidar_ros/rplidarNode
+/home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/rplidar_ros/lib/rplidar_ros/rplidarNodeClient /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/lib/rplidar_ros/rplidarNodeClient

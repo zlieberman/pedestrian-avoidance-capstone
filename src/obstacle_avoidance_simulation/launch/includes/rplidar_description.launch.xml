@@ -1,0 +1,7 @@
+<launch>
+  <arg name="base"/>
+  <arg name="stacks"/>
+
+  <arg name="urdf_file" default="$(find xacro)/xacro '$(find turtlebot_obstacle_avoidance)/robots/$(arg base)_$(arg stacks)_rplidar_a1.urdf.xacro'"/>
+  <param name="robot_description" command="$(arg urdf_file)"/>  
+</launch>

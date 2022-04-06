@@ -1,0 +1,13 @@
+Darknet path dir = /home/nvidia/Desktop/pedestrian-avoidance-capstone/src/darknet_ros/darknet
+[31m[1mCMake Error[0m at /usr/share/cmake-3.5/Modules/FindCUDA.cmake:1649 (add_library):
+  Cannot find source file:
+
+    src/image_interface.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+[36mCall Stack (most recent call first):[0m
+  CMakeLists.txt:97 (cuda_add_library)
+
+
+make: *** [cmake_check_build_system] Error 1

@@ -1,0 +1,7 @@
+[01m[Kc++:[m[K [01;31m[Kinternal compiler error: [m[KKilled (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-5/README.Bugs> for instructions.
+make[2]: *** [CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o] Error 4
+make[1]: *** [CMakeFiles/teb_local_planner.dir/all] Error 2
+make: *** [all] Error 2

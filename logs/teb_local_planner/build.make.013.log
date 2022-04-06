@@ -1,0 +1,41 @@
+[  0%] Built target _teb_local_planner_generate_messages_check_deps_TrajectoryMsg
+[  0%] Built target _teb_local_planner_generate_messages_check_deps_FeedbackMsg
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target darknet_ros_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target _teb_local_planner_generate_messages_check_deps_TrajectoryPointMsg
+[  0%] Built target costmap_converter_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target darknet_ros_msgs_generate_messages_eus
+[  0%] Built target costmap_converter_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target darknet_ros_msgs_generate_messages_cpp
+[  0%] Built target costmap_converter_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target darknet_ros_msgs_generate_messages_lisp
+[  0%] Built target costmap_converter_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target darknet_ros_msgs_generate_messages_py
+[  0%] Built target costmap_converter_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  3%] Built target teb_local_planner_gencfg
+[ 13%] Built target teb_local_planner_generate_messages_nodejs
+[ 26%] Built target teb_local_planner_generate_messages_eus
+[ 36%] Built target teb_local_planner_generate_messages_cpp
+[ 46%] Built target teb_local_planner_generate_messages_lisp
+[ 60%] Built target teb_local_planner_generate_messages_py
+[35m[1mScanning dependencies of target teb_local_planner[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o[0m
+[01m[Kc++:[m[K [01;31m[Kinternal compiler error: [m[KKilled (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-5/README.Bugs> for instructions.
+CMakeFiles/teb_local_planner.dir/build.make:230: recipe for target 'CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o' failed
+make[2]: *** [CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o] Error 4
+CMakeFiles/Makefile2:2498: recipe for target 'CMakeFiles/teb_local_planner.dir/all' failed
+make[1]: *** [CMakeFiles/teb_local_planner.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2
