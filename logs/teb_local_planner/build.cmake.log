@@ -1,7 +1,7 @@
 Not searching for unused variables given on the command line.
 [36m--[0m Using CATKIN_DEVEL_PREFIX: /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/teb_local_planner
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel;/home/nvidia/catkin_ws/devel;/opt/ros/kinetic
-[36m--[0m This workspace overlays: /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel;/home/nvidia/catkin_ws/devel;/opt/ros/kinetic
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel;/opt/ros/kinetic
+[36m--[0m This workspace overlays: /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel;/opt/ros/kinetic
 [36m--[0m Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.12", minimum required is "2")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python2
 [36m--[0m Using Debian Python package layout
@@ -30,18 +30,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Searching for g2o ...
 [36m--[0m Found g2o headers in: /opt/ros/kinetic/include/g2o
 [36m--[0m Found libg2o: /opt/ros/kinetic/lib/libg2o_csparse_extension.so;/opt/ros/kinetic/lib/libg2o_core.so;/opt/ros/kinetic/lib/libg2o_stuff.so;/opt/ros/kinetic/lib/libg2o_types_slam2d.so;/opt/ros/kinetic/lib/libg2o_types_slam3d.so;/opt/ros/kinetic/lib/libg2o_solver_cholmod.so;/opt/ros/kinetic/lib/libg2o_solver_pcg.so;/opt/ros/kinetic/lib/libg2o_solver_csparse.so;/opt/ros/kinetic/lib/libg2o_incremental.so
-[31m[1mCMake Error[0m at /opt/ros/kinetic/share/catkin/cmake/assert.cmake:20 (message):
-
-
-  Assertion failed: file
-  '/home/nvidia/Desktop/pedestrian-avoidance-capstone/src/teb_local_planner/msg/BoundingBoxes.msg'
-  does not exist.  Message: message file not found
-
-[36mCall Stack (most recent call first):[0m
-  /opt/ros/kinetic/share/genmsg/cmake/genmsg-extras.cmake:113 (assert_file_exists)
-  CMakeLists.txt:101 (add_message_files)
-
-
-[36m--[0m Configuring incomplete, errors occurred!
-See also "/home/nvidia/Desktop/pedestrian-avoidance-capstone/build/teb_local_planner/CMakeFiles/CMakeOutput.log".
-See also "/home/nvidia/Desktop/pedestrian-avoidance-capstone/build/teb_local_planner/CMakeFiles/CMakeError.log".
+[36m--[0m teb_local_planner: 3 messages, 0 services
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/nvidia/Desktop/pedestrian-avoidance-capstone/build/teb_local_planner

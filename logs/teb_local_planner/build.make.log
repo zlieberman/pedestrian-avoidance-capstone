@@ -27,7 +27,6 @@
 [ 36%] Built target teb_local_planner_generate_messages_cpp
 [ 46%] Built target teb_local_planner_generate_messages_lisp
 [ 60%] Built target teb_local_planner_generate_messages_py
-[35m[1mScanning dependencies of target teb_local_planner[0m
 [ 63%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o[0m
 [ 66%] [32m[1mLinking CXX shared library /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/teb_local_planner/lib/libteb_local_planner.so[0m
 [ 93%] Built target teb_local_planner
