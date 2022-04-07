@@ -1,16 +1,14 @@
 blacklist: []
 build_space: build
 catkin_make_args: []
-cmake_args:
-- -DCMAKE_CXX_FLAGS=--param ggc-min-expand=20
+cmake_args: []
 devel_layout: linked
 devel_space: devel
 extend_path: null
 install: false
 install_space: install
 isolate_install: false
-jobs_args:
-- -j 1
+jobs_args: []
 log_space: logs
 make_args: []
 source_space: src
