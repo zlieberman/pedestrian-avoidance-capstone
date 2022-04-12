@@ -1,5 +1,0 @@
-[35m[1mScanning dependencies of target obstacle_avoidance[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/obstacle_avoidance.dir/src/obstacle_avoidance.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/obstacle_avoidance.dir/src/main.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/turtlebot_obstacle_avoidance/lib/turtlebot_obstacle_avoidance/obstacle_avoidance[0m
-[100%] Built target obstacle_avoidance
