@@ -325,14 +325,11 @@ bool TebLocalPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel)
  
   // account for any pedestrians detected
 	for (auto bounding_box : pedestrian_detected_objects_) {
-		if (bounding_box.Z <= 1200 && (bounding_box.X >= -350 && bounding_box.X <= 750)) {
-			cmd_vel.linear.x = 0;
-			cmd_vel.linear.y = 0;
-			cmd_vel.angular.z = 0;
+		if (bounding_box.Z <= 1000 && (bounding_box.X >= -350 && bounding_box.X <= 750)) {
 
 			planner_->clearPlanner(); // force reinitialization
 			ROS_WARN("Pedestrian Detected, clearing local planner and trying again");
-		
+	
 			ros::Duration(.1).sleep(); // sleep for a second to give pedestrian time to move
 			// time_waiting_for_pedestrian_ = ros::Time::now();
 			last_cmd_ = cmd_vel;
@@ -1004,7 +1001,7 @@ void TebLocalPlannerROS::customViaPointsCB(const nav_msgs::Path::ConstPtr& via_p
 }
 
 void TebLocalPlannerROS::pedestrianDetectedCB(const darknet_ros_msgs::BoundingBoxes::ConstPtr& pedestrians_msg) {
-  ROS_INFO("%d pedestrians detected", pedestrians_msg->bounding_boxes.size());
+  // ROS_INFO("%d pedestrians detected", pedestrians_msg->bounding_boxes.size());
   pedestrian_detected_objects_ = pedestrians_msg->bounding_boxes;
 }
      
