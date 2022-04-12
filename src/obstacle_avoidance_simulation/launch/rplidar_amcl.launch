@@ -3,7 +3,7 @@
   <arg name="3d_sensor" default="kinect"/>  <!-- r200, kinect, asus_xtion_pro -->
 
   <!-- Map server -->
-  <arg name="map_file" default="/home/nvidia/Desktop/pedestrian-avoidance-capstone/maps/lab3.yaml"/>
+  <arg name="map_file" default="/home/nvidia/Desktop/pedestrian-avoidance-capstone/maps/lab4.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!-- AMCL -->

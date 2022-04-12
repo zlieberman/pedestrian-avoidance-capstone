@@ -323,23 +323,22 @@ bool TebLocalPlannerROS::computeVelocityCommands(geometry_msgs::Twist& cmd_vel)
   // Do not allow config changes during the following optimization step
   boost::mutex::scoped_lock cfg_lock(cfg_.configMutex());
  
-  //for (int i=0; i < pedestrian_detected_objects_.size(); ++i) {
-  //  ROS_INFO(pedestrian_detected_objects_[i].Class);
-  //}
   // account for any pedestrians detected
-  if (pedestrian_detected_objects_.size() != 0) {
-    for (auto bounding_box : pedestrian_detected_objects_) {
-	if (bounding_box.Z <= 1000) {
-	    planner_->clearPlanner(); // force reinitialization
-	    ROS_WARN("Pedestrian Detected, clearing local planner and trying again");
-	    
-	    ros::Duration(1).sleep(); // sleep for a second to give pedestrian time to move
-	    // time_waiting_for_pedestrian_ = ros::Time::now();
-	    last_cmd_ = cmd_vel;
-	    return false;
+	for (auto bounding_box : pedestrian_detected_objects_) {
+		if (bounding_box.Z <= 1200 && (bounding_box.X >= -350 && bounding_box.X <= 750)) {
+			cmd_vel.linear.x = 0;
+			cmd_vel.linear.y = 0;
+			cmd_vel.angular.z = 0;
+
+			planner_->clearPlanner(); // force reinitialization
+			ROS_WARN("Pedestrian Detected, clearing local planner and trying again");
+		
+			ros::Duration(.1).sleep(); // sleep for a second to give pedestrian time to move
+			// time_waiting_for_pedestrian_ = ros::Time::now();
+			last_cmd_ = cmd_vel;
+			return false;
+		}
 	}
-    }
-  }
    
   // Now perform the actual planning
 //   bool success = planner_->plan(robot_pose_, robot_goal_, robot_vel_, cfg_.goal_tolerance.free_goal_vel); // straight line init

@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target distance_node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/distance_node.dir/src/distance_node.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/nvidia/Desktop/pedestrian-avoidance-capstone/devel/.private/distance_core/lib/distance_core/distance_node[0m
-[100%] Built target distance_node
