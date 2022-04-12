@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="tf" type="static_transform_publisher" name="laser" args="0.015 0.00 0.05 0 3.1415926535 0 /plate_top_link /laser 50"/>
-</launch>

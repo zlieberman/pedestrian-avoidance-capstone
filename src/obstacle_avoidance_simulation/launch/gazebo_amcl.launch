@@ -19,5 +19,8 @@
 
   <!-- Move base -->
  <include file="$(find turtlebot_obstacle_avoidance)/launch/includes/custom_move_base.launch.xml"/>
+ <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0 0 0.0 /map /odom 1000"/>blo 
 </launch>
+
+
 
