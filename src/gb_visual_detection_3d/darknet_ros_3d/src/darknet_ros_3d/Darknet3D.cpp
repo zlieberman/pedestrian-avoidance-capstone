@@ -40,6 +40,10 @@
 #include <ros/ros.h>
 
 #include <visualization_msgs/MarkerArray.h>
+#include <costmap_converter/ObstacleArrayMsg.h>
+#include <geometry_msgs/Polygon.h>
+#include <geometry_msgs/Quaternion.h>
+#include <geometry_msgs/TwistWithCovariance.h>
 
 #include <pcl_ros/transforms.h>
 #include <pcl_conversions/pcl_conversions.h>
@@ -57,6 +61,7 @@ Darknet3D::Darknet3D():
 
   darknet3d_pub_ = nh_.advertise<gb_visual_detection_3d_msgs::BoundingBoxes3d>(output_bbx3d_topic_, 100);
   markers_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/darknet_ros_3d/markers", 100);
+  obstacles_pub_ = nh_.advertise<costmap_converter::ObstacleArrayMsg>("/darknet_ros_3d/obstacles", 100);
 
   yolo_sub_ = nh_.subscribe(input_bbx_topic_, 1, &Darknet3D::darknetCb, this);
   pointCloud_sub_ = nh_.subscribe(pointcloud_topic_, 1, &Darknet3D::pointCloudCb, this);
@@ -200,11 +205,13 @@ void
 Darknet3D::publish_markers(const gb_visual_detection_3d_msgs::BoundingBoxes3d& boxes)
 {
   visualization_msgs::MarkerArray msg;
+  costmap_converter::ObstacleArrayMsg obstacles_msg;
 
   int counter_id = 0;
   for (auto bb : boxes.bounding_boxes)
   {
     visualization_msgs::Marker bbx_marker;
+    costmap_converter::ObstacleMsg obstacle;
 
     bbx_marker.header.frame_id = boxes.header.frame_id;
     bbx_marker.header.stamp = boxes.header.stamp;
@@ -228,10 +235,36 @@ Darknet3D::publish_markers(const gb_visual_detection_3d_msgs::BoundingBoxes3d& b
     bbx_marker.color.a = 0.4;
     bbx_marker.lifetime = ros::Duration(0.5);
 
+	// header
+    obstacle.header.frame_id = boxes.header.frame_id;
+	obstacle.header.stamp = boxes.header.stamp;
+	// polygon
+	geometry_msgs::Polygon obstacle_polygon;
+	geometry_msgs::Point32 center_point;
+	center_point.x = (bb.xmax + bb.xmin) / 2.0; 
+	center_point.y = (bb.ymax + bb.ymin) / 2.0; 
+	center_point.z = (bb.zmax + bb.zmin) / 2.0;
+	obstacle_polygon.points.push_back(center_point);
+	obstacle.polygon = obstacle_polygon;
+	// radius
+	obstacle.radius = 0.5; // don't know the units yet
+	// id
+	obstacle.id = counter_id;
+	// individual orientation
+	obstacle.orientation.x = 0.0;
+	obstacle.orientation.y = 0.0;
+	obstacle.orientation.z = 0.0;
+	obstacle.orientation.w = 1.0;
+	// individual velocities
+	// obstacle.velocities.twist.linear.x = 0
+	
+
+	obstacles_msg.obstacles.push_back(obstacle);
     msg.markers.push_back(bbx_marker);
   }
 
   markers_pub_.publish(msg);
+  obstacles_pub_.publish(obstacles_msg);
 }
 
 };  // namespace darknet_ros_3d

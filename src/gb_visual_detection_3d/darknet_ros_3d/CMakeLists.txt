@@ -18,6 +18,8 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   pcl_conversions
   roslint
+  geometry_msgs
+  costmap_converter
 )
 
 catkin_package(
