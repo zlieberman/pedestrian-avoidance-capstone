@@ -21,10 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  CATKIN_DEPENDS ${PACKAGE_DEPENDENCIES}
-  DEPENDS PCL
-  INCLUDE_DIRS include
-  LIBRARIES ${PROJECT_NAME}
+  
 )
 
 include_directories(
@@ -52,7 +49,7 @@ add_dependencies(${PROJECT_NAME}
 roslint_cpp(
   src/darknet_ros_3d/Darknet3D.cpp include/darknet_ros_3d/Darknet3D.h
   src/darknet_ros_3d/Darknet3DListener.cpp include/darknet_ros_3d/Darknet3DListener.h
-  src/darknet3d_node.cpp
+  src/darknet3d_node.cpp include/darknet_ros_3d/Darknet3D.h
 )
 
 install(TARGETS ${PROJECT_NAME}
