@@ -1,96 +1,63 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 project(darknet_ros_3d)
 
+## Compile as C++11, supported in ROS Kinetic and newer
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
+add_compile_options(-std=c++11)
 
-# Default to C99
-if(NOT CMAKE_C_STANDARD)
-  set(CMAKE_C_STANDARD 99)
-endif()
-
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
-
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rclcpp_lifecycle REQUIRED)
-find_package(lifecycle_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(darknet_ros_msgs REQUIRED)
-find_package(gb_visual_detection_3d_msgs)
-find_package(tf2 REQUIRED)
-find_package(tf2_ros REQUIRED)
-find_package(tf2_sensor_msgs REQUIRED)
-find_package(visualization_msgs REQUIRED)
-find_package(eigen3_cmake_module REQUIRED)
-find_package(Eigen3)
-
-set(dependencies
-  rclcpp
-  rclcpp_lifecycle
-  lifecycle_msgs
-  sensor_msgs
+## Find catkin macros and libraries
+## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
+## is used, also find other catkin packages
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
   darknet_ros_msgs
   gb_visual_detection_3d_msgs
-  tf2
+  sensor_msgs
   tf2_ros
-  tf2_sensor_msgs
-  visualization_msgs
+  tf2_geometry_msgs
+  pcl_ros
+  pcl_conversions
+  roslint
+)
+
+catkin_package(
+  CATKIN_DEPENDS ${PACKAGE_DEPENDENCIES}
+  DEPENDS PCL
+  INCLUDE_DIRS include
+  LIBRARIES ${PROJECT_NAME}
 )
 
 include_directories(
-  include/
-  ${Eigen3_INCLUDE_DIRS}
+  include
+  ${catkin_INCLUDE_DIRS}
 )
 
-add_library(${PROJECT_NAME} SHARED
+add_library(${PROJECT_NAME}
   src/darknet_ros_3d/Darknet3D.cpp
+  src/darknet_ros_3d/Darknet3DListener.cpp
 )
-ament_target_dependencies(${PROJECT_NAME} ${dependencies})
+
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 add_executable(darknet3d_node src/darknet3d_node.cpp)
-ament_target_dependencies(darknet3d_node ${dependencies})
-target_link_libraries(darknet3d_node ${PROJECT_NAME} ${Boost_LIBRARIES})
+target_link_libraries(darknet3d_node ${catkin_LIBRARIES} ${PROJECT_NAME})
 
-target_include_directories(darknet3d_node PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-  ${Eigen3_INCLUDE_DIRS}
+add_executable(darknet3d_listener_node test/darknet3d_listener_node.cpp)
+target_link_libraries(darknet3d_listener_node ${catkin_LIBRARIES} ${PROJECT_NAME})
+
+add_dependencies(${PROJECT_NAME}
+  gb_visual_detection_3d_msgs_generate_messages_cpp
 )
 
-install(DIRECTORY include/
-  DESTINATION include/
-)
-install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME}/)
-
-
-install(TARGETS
-  ${PROJECT_NAME}
-  darknet3d_node
-  EXPORT export_${PROJECT_NAME}
-  DESTINATION lib/${PROJECT_NAME}
-  LIBRARY DESTINATION lib
+roslint_cpp(
+  src/darknet_ros_3d/Darknet3D.cpp include/darknet_ros_3d/Darknet3D.h
+  src/darknet_ros_3d/Darknet3DListener.cpp include/darknet_ros_3d/Darknet3DListener.h
+  src/darknet3d_node.cpp
 )
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+install(TARGETS ${PROJECT_NAME}
+   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
 
-ament_export_libraries(${PROJECT_NAME})
-
-ament_package()
+install(DIRECTORY include/${PROJECT_NAME}/
+     DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
